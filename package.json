@@ -1,0 +1,22 @@
+{
+  "name": "quentintronc_3_11032021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "sass": "sass --watch docs/main.scss:docs/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaidTimes/QuentinTronc_3_11032021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaidTimes/QuentinTronc_3_11032021/issues"
+  },
+  "homepage": "https://github.com/RaidTimes/QuentinTronc_3_11032021#readme"
+}
