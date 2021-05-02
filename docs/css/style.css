@@ -6,26 +6,54 @@ npm run sass
 */
 @font-face {
   font-family: "shrikhand";
-  src: url("assets/police/Shrikhand-Regular.ttf");
+  src: url("../assets/police/Shrikhand-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("assets/police/Roboto-Light.ttf");
+  src: url("../assets/police/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Robotobold";
+  src: url("../assets/police/Roboto-Bold.ttf");
+}
+@keyframes items {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "shrikhand";
+  font-family: "Roboto";
 }
-
-header {
+body .load {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .load__item {
+  background-color: #9356DC;
+  height: 170px;
+  width: 5%;
+  animation: items 3000ms;
+}
+body main {
+  max-width: 1440px;
+  margin: auto;
+}
+body header {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 15px;
   margin-top: 10px;
 }
-header #head {
+body header #head {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -35,8 +63,33 @@ header #head {
   background-color: #F2F2F2;
   color: #2c2c2c;
 }
-header #head #map {
+body header #head #map {
   padding-left: 15px;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 245px;
+  color: white;
+  background-color: #2c2c2c;
+  font-size: 16px;
+}
+body footer h2 {
+  font-size: 20px;
+  font-style: italic;
+  font-family: "shrikhand";
+}
+body footer .foot {
+  display: flex;
+  align-items: center;
+}
+body footer .foot .fa-utensils {
+  font-size: 15px;
+  margin-right: 10px;
+}
+body footer .foot .fa-hands-helping {
+  font-size: 12px;
+  margin-right: 10px;
 }
 
 .titre {
@@ -44,12 +97,15 @@ header #head #map {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 20px;
   padding-right: 20px;
 }
+.titre h1 {
+  font-family: "shrikhand";
+}
 .titre .dec {
-  font-size: 18px;
+  font-size: 16px;
   color: #888888;
 }
 .titre a {
@@ -57,82 +113,111 @@ header #head #map {
   text-decoration: none;
   border: 0;
   padding: 20px;
-  width: 70%;
-  font-size: 18px;
+  width: 20%;
+  font-size: 16px;
   text-align: center;
   color: #fff;
   font-family: "Roboto";
   border-radius: 50px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background-color: #9356DC;
+  transition: background-color 250ms;
+}
+.titre a:hover {
+  background-color: #ff93e1;
 }
 
 .fonctionnement {
   display: flex;
   flex-direction: column;
+}
+.fonctionnement h2 {
+  font-size: 18px;
   margin-left: 15px;
 }
-.fonctionnement .blocfon {
+.fonctionnement .bloccomplet {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.fonctionnement .bloccomplet .blocfon {
   display: flex;
   align-items: center;
+  flex-direction: row;
   margin-bottom: 30px;
+  width: 100%;
 }
-.fonctionnement .blocfon .number {
+.fonctionnement .bloccomplet .blocfon .number {
   padding: 5px;
   text-align: center;
   background-color: #9356DC;
   border-radius: 25px;
-  width: 6%;
+  font-size: 14px;
+  width: 5%;
+  position: relative;
+  left: 4%;
 }
-.fonctionnement .blocfon .blocfonttext {
+.fonctionnement .bloccomplet .blocfon .blocfonttext {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
   padding-top: 2%;
   padding-bottom: 2%;
-  padding-left: 5%;
+  padding-left: 10%;
   padding-right: 20%;
   border-radius: 20px;
   background-color: #F2F2F2;
+  width: 55%;
 }
-.fonctionnement .blocfon .blocfonttext #phone {
-  margin-right: 20px;
+.fonctionnement .bloccomplet .blocfon .blocfonttext #phone {
+  padding-right: 20px;
 }
-.fonctionnement .blocfon .blocfonttext #deg {
-  margin-right: 20px;
+.fonctionnement .bloccomplet .blocfon .blocfonttext #deg {
+  padding-right: 20px;
   color: #9356DC;
 }
-.fonctionnement .blocfon .blocfonttextcompo {
+.fonctionnement .bloccomplet .blocfon .blocfonttextcompo {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
   padding-top: 2%;
   padding-bottom: 2%;
-  padding-left: 5%;
+  padding-left: 10%;
   padding-right: 23%;
   border-radius: 20px;
   background-color: #F2F2F2;
+  width: 52%;
 }
-.fonctionnement .blocfon .blocfonttextcompo #compo {
-  margin-right: 20px;
+.fonctionnement .bloccomplet .blocfon .blocfonttextcompo #compo {
+  padding-right: 20px;
 }
 
 .secrestau {
   display: flex;
   flex-direction: column;
   background: #F2F2F2;
+  border-radius: 15px 15px 0px 0px;
   padding-bottom: 40px;
 }
-.secrestau #restau {
+.secrestau h2 {
+  font-size: 18px;
   margin-left: 15px;
 }
-.secrestau .forcenter {
+.secrestau .bureau {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.secrestau .bureau a {
   display: flex;
   justify-content: center;
+  text-decoration: none;
+  color: black;
   margin-bottom: 20px;
+  width: 100%;
 }
-.secrestau .forcenter .blocrestau {
+.secrestau .bureau a .blocrestau {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -140,58 +225,54 @@ header #head #map {
   width: 90%;
   height: 300px;
 }
-.secrestau .forcenter .blocrestau .taillerestau {
+.secrestau .bureau a .blocrestau .taillerestau {
   max-width: 100%;
   height: 200px;
   border-radius: 15px 15px 0px 0px;
   overflow: hidden;
   position: relative;
 }
-.secrestau .forcenter .blocrestau .taillerestau img {
+.secrestau .bureau a .blocrestau .taillerestau img {
   width: 100%;
   position: absolute;
   bottom: 0%;
 }
-.secrestau .forcenter .blocrestau .restauname {
+.secrestau .bureau a .blocrestau .restauname {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: 10px;
-  margin-right: 20px;
+  margin-right: 25px;
+  font-size: 16px;
+  font-family: "Robotobold";
 }
-.secrestau .forcenter .blocrestau .restauname .heart .inactif:active {
+.secrestau .bureau a .blocrestau .restauname .heart {
+  position: relative;
+  font-size: 25px;
+  width: 12px;
+}
+.secrestau .bureau a .blocrestau .restauname .heart .inactif {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.secrestau .bureau a .blocrestau .restauname .heart .actif {
+  color: #9356DC;
+  position: absolute;
+  left: 0;
   display: none;
 }
-.secrestau .forcenter .blocrestau .restauname .heart .actif:active {
-  color: #9356DC;
+.secrestau .bureau a .blocrestau .restauname .heart:active .inactif {
+  display: none;
 }
-.secrestau .forcenter .blocrestau .restauville {
+.secrestau .bureau a .blocrestau .restauname .heart:active .actif {
+  display: inline-block;
+}
+.secrestau .bureau a .blocrestau .restauville {
+  font-size: 14px;
   margin-left: 10px;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  padding-left: 15px;
-  color: white;
-  background-color: #2c2c2c;
-}
-footer h2 {
-  font-style: italic;
-  font-family: "shrikhand";
-}
-footer .foot {
-  display: flex;
-  align-items: center;
-}
-footer .foot .fa-utensils {
-  font-size: 15px;
-}
-footer .foot .fa-hands-helping {
-  font-size: 12px;
-}
-footer .foot i {
-  margin-right: 10px;
+  position: relative;
+  bottom: 5%;
 }
 
 .menuhead {
@@ -200,6 +281,8 @@ footer .foot i {
   width: 100%;
   height: 300px;
   background-color: #f2f2f2;
+  font-family: "shrikhand";
+  font-size: 18px;
 }
 .menuhead .photohead {
   max-width: 100%;
@@ -219,31 +302,57 @@ footer .foot i {
   background-color: #f2f2f2;
   border-radius: 15px 15px 0px 0px;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 20px;
   max-width: 100%;
   position: relative;
   bottom: 10%;
 }
-.menuhead .heartmenu .heart .inactif:active {
+.menuhead .heartmenu .heart {
+  position: relative;
+  font-size: 25px;
+  width: 12px;
+}
+.menuhead .heartmenu .heart .inactif {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.menuhead .heartmenu .heart .actif {
+  color: #9356DC;
+  position: absolute;
+  left: 0;
   display: none;
 }
-.menuhead .heartmenu .heart .actif:active {
-  color: #9356DC;
+.menuhead .heartmenu .heart:hover .inactif {
+  display: none;
+}
+.menuhead .heartmenu .heart:hover .actif {
+  display: inline-block;
 }
 
 .entree {
   font-size: 14px;
   background-color: #f2f2f2;
+  padding-top: 1px;
 }
 .entree h2 {
   padding-left: 15px;
 }
-.entree .forcenter {
+.entree .bur {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  margin-bottom: 15px;
 }
-.entree .forcenter .bloc {
+.entree .bur .forcenter {
+  padding-bottom: 15px;
+  margin-left: 15px;
+  width: 100%;
+}
+.entree .bur .forcenter .blocanim {
+  display: flex;
+  width: 100%;
+}
+.entree .bur .forcenter .blocanim .bloc {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -252,13 +361,34 @@ footer .foot i {
   width: 90%;
   height: 75px;
 }
-.entree .forcenter .bloc .bloctext {
+.entree .bur .forcenter .blocanim .bloc .bloctext {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-right: 15px;
   position: relative;
   bottom: 30%;
+}
+.entree .bur .forcenter .blocanim .itemcheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 0px 15px 15px 0px;
+  width: 0%;
+  background-color: #99E2D0;
+  color: white;
+  overflow: hidden;
+  text-decoration: none;
+}
+.entree .bur .forcenter .blocanim:hover .bloc {
+  border-radius: 15px 0px 0px 15px;
+  width: 70%;
+}
+.entree .bur .forcenter .blocanim:hover .itemcheck {
+  width: 20%;
+  overflow: visible;
+  cursor: grab;
 }
 
 .plat {
@@ -269,12 +399,21 @@ footer .foot i {
 .plat h2 {
   padding-left: 15px;
 }
-.plat .forcenter {
+.plat .bur {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  padding-bottom: 15px;
 }
-.plat .forcenter .bloc {
+.plat .bur .forcenter {
+  padding-bottom: 15px;
+  margin-left: 15px;
+  width: 100%;
+}
+.plat .bur .forcenter .blocanim {
+  display: flex;
+  width: 100%;
+}
+.plat .bur .forcenter .blocanim .bloc {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -283,7 +422,7 @@ footer .foot i {
   width: 90%;
   height: 75px;
 }
-.plat .forcenter .bloc .bloctext {
+.plat .bur .forcenter .blocanim .bloc .bloctext {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -291,24 +430,825 @@ footer .foot i {
   position: relative;
   bottom: 30%;
 }
+.plat .bur .forcenter .blocanim .itemcheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 0px 15px 15px 0px;
+  width: 0%;
+  background-color: #99E2D0;
+  color: white;
+  overflow: hidden;
+  text-decoration: none;
+}
+.plat .bur .forcenter .blocanim:hover .bloc {
+  border-radius: 15px 0px 0px 15px;
+  width: 70%;
+}
+.plat .bur .forcenter .blocanim:hover .itemcheck {
+  width: 20%;
+  overflow: visible;
+  cursor: grab;
+}
 
 .commande {
   display: flex;
   justify-content: center;
+  padding-top: 40px;
   padding-bottom: 100px;
   background-color: #f2f2f2;
 }
 .commande a {
   padding-top: 10px;
+  text-decoration: none;
   border: 0;
   padding: 20px;
-  width: 70%;
+  width: 27%;
   font-size: 18px;
   text-align: center;
   color: #fff;
   font-family: "Roboto";
   border-radius: 50px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: #9356DC;
+  transition: background-color 250ms;
+}
+.commande a:hover {
+  background-color: #ff93e1;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto";
+  }
+  body main {
+    max-width: 1440px;
+    margin: auto;
+  }
+  body header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-top: 10px;
+  }
+  body header #head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #F2F2F2;
+    color: #2c2c2c;
+  }
+  body header #head #map {
+    padding-left: 15px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 245px;
+    color: white;
+    background-color: #2c2c2c;
+    font-size: 16px;
+  }
+  body footer h2 {
+    font-size: 20px;
+    font-style: italic;
+    font-family: "shrikhand";
+  }
+  body footer .foot {
+    display: flex;
+    align-items: center;
+  }
+  body footer .foot .fa-utensils {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  body footer .foot .fa-hands-helping {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .titre h1 {
+    font-family: "shrikhand";
+  }
+  .titre .dec {
+    font-size: 16px;
+    color: #888888;
+  }
+  .titre a {
+    margin-top: 10px;
+    text-decoration: none;
+    border: 0;
+    padding: 20px;
+    width: 20%;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto";
+    border-radius: 50px;
+    background-color: #9356DC;
+    transition: background-color 250ms;
+  }
+  .titre a:hover {
+    background-color: #ff93e1;
+  }
+
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+  }
+  .fonctionnement h2 {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .fonctionnement .bloccomplet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .fonctionnement .bloccomplet .blocfon {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .fonctionnement .bloccomplet .blocfon .number {
+    padding: 5px;
+    text-align: center;
+    background-color: #9356DC;
+    border-radius: 25px;
+    font-size: 14px;
+    width: 5%;
+    position: relative;
+    left: 4%;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 20%;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    width: 55%;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttext #phone {
+    padding-right: 20px;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttext #deg {
+    padding-right: 20px;
+    color: #9356DC;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttextcompo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 23%;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    width: 52%;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttextcompo #compo {
+    padding-right: 20px;
+  }
+
+  .secrestau {
+    display: flex;
+    flex-direction: column;
+    background: #F2F2F2;
+    border-radius: 15px 15px 0px 0px;
+    padding-bottom: 40px;
+  }
+  .secrestau h2 {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .secrestau .bureau {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .secrestau .bureau a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .secrestau .bureau a .blocrestau {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    width: 90%;
+    height: 300px;
+  }
+  .secrestau .bureau a .blocrestau .taillerestau {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 15px 15px 0px 0px;
+    overflow: hidden;
+    position: relative;
+  }
+  .secrestau .bureau a .blocrestau .taillerestau img {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+  }
+  .secrestau .bureau a .blocrestau .restauname {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 25px;
+    font-size: 16px;
+    font-family: "Robotobold";
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart {
+    position: relative;
+    font-size: 25px;
+    width: 12px;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart .inactif {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart .actif {
+    color: #9356DC;
+    position: absolute;
+    left: 0;
+    display: none;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart:active .inactif {
+    display: none;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart:active .actif {
+    display: inline-block;
+  }
+  .secrestau .bureau a .blocrestau .restauville {
+    font-size: 14px;
+    margin-left: 10px;
+    position: relative;
+    bottom: 5%;
+  }
+
+  .menuhead {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    background-color: #f2f2f2;
+    font-family: "shrikhand";
+    font-size: 18px;
+  }
+  .menuhead .photohead {
+    max-width: 100%;
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+  }
+  .menuhead .photohead img {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+  }
+  .menuhead .heartmenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    border-radius: 15px 15px 0px 0px;
+    padding-left: 15px;
+    padding-right: 20px;
+    max-width: 100%;
+    position: relative;
+    bottom: 10%;
+  }
+  .menuhead .heartmenu .heart {
+    position: relative;
+    font-size: 25px;
+    width: 12px;
+  }
+  .menuhead .heartmenu .heart .inactif {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+  }
+  .menuhead .heartmenu .heart .actif {
+    color: #9356DC;
+    position: absolute;
+    left: 0;
+    display: none;
+  }
+  .menuhead .heartmenu .heart:hover .inactif {
+    display: none;
+  }
+  .menuhead .heartmenu .heart:hover .actif {
+    display: inline-block;
+  }
+
+  .entree {
+    font-size: 14px;
+    background-color: #f2f2f2;
+  }
+  .entree h2 {
+    padding-left: 15px;
+  }
+  .entree .bur {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .entree .bur .forcenter {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  .entree .bur .forcenter .bloc {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    padding-left: 10px;
+    width: 90%;
+    height: 75px;
+  }
+  .entree .bur .forcenter .bloc .bloctext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    position: relative;
+    bottom: 30%;
+  }
+
+  .plat {
+    padding-top: 10px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+  }
+  .plat h2 {
+    padding-left: 15px;
+  }
+  .plat .bur {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .plat .bur .forcenter {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  .plat .bur .forcenter .bloc {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    padding-left: 10px;
+    width: 90%;
+    height: 75px;
+  }
+  .plat .bur .forcenter .bloc .bloctext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    position: relative;
+    bottom: 30%;
+  }
+
+  .commande {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background-color: #f2f2f2;
+  }
+  .commande a {
+    padding-top: 10px;
+    text-decoration: none;
+    border: 0;
+    padding: 20px;
+    width: 27%;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto";
+    border-radius: 50px;
+    background: #9356DC;
+    transition: background-color 250ms;
+  }
+  .commande a:hover {
+    background-color: #ff93e1;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto";
+  }
+  body header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-top: 10px;
+  }
+  body header #head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #F2F2F2;
+    color: #2c2c2c;
+  }
+  body header #head #map {
+    padding-left: 15px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    color: white;
+    background-color: #2c2c2c;
+    font-size: 16px;
+  }
+  body footer h2 {
+    font-size: 20px;
+    font-style: italic;
+    font-family: "shrikhand";
+  }
+  body footer .foot {
+    display: flex;
+    align-items: center;
+  }
+  body footer .foot .fa-utensils {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  body footer .foot .fa-hands-helping {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .titre h1 {
+    font-family: "shrikhand";
+  }
+  .titre .dec {
+    font-size: 16px;
+    color: #888888;
+  }
+  .titre a {
+    margin-top: 10px;
+    text-decoration: none;
+    border: 0;
+    padding: 20px;
+    width: 70%;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto";
+    border-radius: 50px;
+    background-color: #9356DC;
+    transition: background-color 250ms;
+  }
+  .titre a:hover {
+    background-color: #ff93e1;
+  }
+
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+  }
+  .fonctionnement h2 {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .fonctionnement .bloccomplet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fonctionnement .bloccomplet .blocfon {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .fonctionnement .bloccomplet .blocfon .number {
+    padding: 5px;
+    text-align: center;
+    background-color: #9356DC;
+    border-radius: 25px;
+    font-size: 14px;
+    width: 5%;
+    position: relative;
+    left: 4%;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 20%;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    width: 55%;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttext #phone {
+    padding-right: 20px;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttext #deg {
+    padding-right: 20px;
+    color: #9356DC;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttextcompo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 23%;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    width: 52%;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttextcompo #compo {
+    padding-right: 20px;
+  }
+
+  .secrestau {
+    display: flex;
+    flex-direction: column;
+    background: #F2F2F2;
+    padding-bottom: 40px;
+  }
+  .secrestau h2 {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .secrestau .bureau {
+    display: flex;
+    flex-direction: column;
+  }
+  .secrestau .bureau a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+  }
+  .secrestau .bureau a .blocrestau {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    width: 90%;
+    height: 300px;
+  }
+  .secrestau .bureau a .blocrestau .taillerestau {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 15px 15px 0px 0px;
+    overflow: hidden;
+    position: relative;
+  }
+  .secrestau .bureau a .blocrestau .taillerestau img {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+  }
+  .secrestau .bureau a .blocrestau .restauname {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 25px;
+    font-size: 16px;
+    font-family: "Robotobold";
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart {
+    position: relative;
+    font-size: 25px;
+    width: 12px;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart .inactif {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart .actif {
+    color: #9356DC;
+    position: absolute;
+    left: 0;
+    display: none;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart:active .inactif {
+    display: none;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart:active .actif {
+    display: inline-block;
+  }
+  .secrestau .bureau a .blocrestau .restauville {
+    font-size: 14px;
+    margin-left: 10px;
+    position: relative;
+    bottom: 5%;
+  }
+
+  .menuhead {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    background-color: #f2f2f2;
+    font-family: "shrikhand";
+    font-size: 18px;
+  }
+  .menuhead .photohead {
+    max-width: 100%;
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+  }
+  .menuhead .photohead img {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+  }
+  .menuhead .heartmenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    border-radius: 15px 15px 0px 0px;
+    padding-left: 15px;
+    padding-right: 20px;
+    max-width: 100%;
+    position: relative;
+    bottom: 10%;
+  }
+  .menuhead .heartmenu .heart {
+    position: relative;
+    font-size: 25px;
+    width: 12px;
+  }
+  .menuhead .heartmenu .heart .inactif {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+  }
+  .menuhead .heartmenu .heart .actif {
+    color: #9356DC;
+    position: absolute;
+    left: 0;
+    display: none;
+  }
+  .menuhead .heartmenu .heart:hover .inactif {
+    display: none;
+  }
+  .menuhead .heartmenu .heart:hover .actif {
+    display: inline-block;
+  }
+
+  .entree {
+    font-size: 14px;
+    background-color: #f2f2f2;
+  }
+  .entree h2 {
+    padding-left: 15px;
+  }
+  .entree .bur {
+    display: flex;
+    flex-direction: column;
+  }
+  .entree .bur .forcenter {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  .entree .bur .forcenter .bloc {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    padding-left: 10px;
+    width: 90%;
+    height: 75px;
+  }
+  .entree .bur .forcenter .bloc .bloctext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    position: relative;
+    bottom: 30%;
+  }
+
+  .plat {
+    padding-top: 10px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+  }
+  .plat h2 {
+    padding-left: 15px;
+  }
+  .plat .bur {
+    display: flex;
+    flex-direction: column;
+  }
+  .plat .bur .forcenter {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  .plat .bur .forcenter .bloc {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    padding-left: 10px;
+    width: 90%;
+    height: 75px;
+  }
+  .plat .bur .forcenter .bloc .bloctext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    position: relative;
+    bottom: 30%;
+  }
+
+  .commande {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background-color: #f2f2f2;
+  }
+  .commande a {
+    padding-top: 10px;
+    text-decoration: none;
+    border: 0;
+    padding: 20px;
+    width: 70%;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto";
+    border-radius: 50px;
+    background: #9356DC;
+    transition: background-color 250ms;
+  }
+  .commande a:hover {
+    background-color: #ff93e1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
