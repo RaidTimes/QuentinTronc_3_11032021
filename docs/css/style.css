@@ -53,6 +53,12 @@ body header {
   padding-bottom: 15px;
   margin-top: 10px;
 }
+body header .arrow {
+  color: black;
+  position: absolute;
+  left: 5%;
+  top: 2%;
+}
 body header #head {
   display: flex;
   flex-direction: row;
@@ -389,6 +395,7 @@ body footer .foot .fa-hands-helping {
   width: 20%;
   overflow: visible;
   cursor: grab;
+  animation-delay: 1000ms;
 }
 
 .plat {
