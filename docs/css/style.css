@@ -24,10 +24,32 @@ npm run sass
     transform: scaleY(1);
   }
 }
+@keyframes hideloader {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -10;
+  }
+}
 body {
   margin: 0px;
   padding: 0px;
   font-family: "Roboto";
+}
+body .loadbloc {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: white;
+  animation: hideloader 3s;
+  animation-fill-mode: forwards;
 }
 body .load {
   width: 100%;
@@ -129,11 +151,11 @@ body footer a .foot .fa-hands-helping {
   color: #fff;
   font-family: "Roboto";
   border-radius: 50px;
-  background-color: #9356DC;
-  transition: background-color 250ms;
+  background: linear-gradient(#FF79DA, #9356DC);
+  transition: background-color 1000ms;
 }
 .titre a:hover {
-  background-color: #ff93e1;
+  background: #ff93e1;
 }
 
 .fonctionnement {
@@ -361,6 +383,8 @@ body footer a .foot .fa-hands-helping {
 .entree .bur .forcenter .blocanim {
   display: flex;
   width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .entree .bur .forcenter .blocanim .bloc {
   display: flex;
@@ -368,8 +392,10 @@ body footer a .foot .fa-hands-helping {
   background-color: white;
   border-radius: 15px 15px 15px 15px;
   padding-left: 10px;
+  transition: width 1s;
   width: 90%;
   height: 75px;
+  text-overflow: ellipsis;
 }
 .entree .bur .forcenter .blocanim .bloc .bloctext {
   display: flex;
@@ -386,10 +412,20 @@ body footer a .foot .fa-hands-helping {
   font-size: 24px;
   border-radius: 0px 15px 15px 0px;
   width: 0%;
+  transition: width 1s;
   background-color: #99E2D0;
   color: white;
   overflow: hidden;
   text-decoration: none;
+}
+.entree .bur .forcenter .blocanim .itemcheck .fas {
+  transform: rotate(359deg);
+  transition: transform 1s;
+}
+.entree .bur .forcenter .blocanim:hover .bloctext p:first-child {
+  width: 70%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .entree .bur .forcenter .blocanim:hover .bloc {
   border-radius: 15px 0px 0px 15px;
@@ -399,7 +435,9 @@ body footer a .foot .fa-hands-helping {
   width: 20%;
   overflow: visible;
   cursor: grab;
-  animation-delay: 1000ms;
+}
+.entree .bur .forcenter .blocanim:hover .itemcheck .fas {
+  transform: rotate(0deg);
 }
 
 .plat {
@@ -423,6 +461,8 @@ body footer a .foot .fa-hands-helping {
 .plat .bur .forcenter .blocanim {
   display: flex;
   width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .plat .bur .forcenter .blocanim .bloc {
   display: flex;
@@ -431,7 +471,9 @@ body footer a .foot .fa-hands-helping {
   border-radius: 15px 15px 15px 15px;
   padding-left: 10px;
   width: 90%;
+  transition: width 1s;
   height: 75px;
+  text-overflow: ellipsis;
 }
 .plat .bur .forcenter .blocanim .bloc .bloctext {
   display: flex;
@@ -451,7 +493,17 @@ body footer a .foot .fa-hands-helping {
   background-color: #99E2D0;
   color: white;
   overflow: hidden;
+  transition: width 1s;
   text-decoration: none;
+}
+.plat .bur .forcenter .blocanim .itemcheck .fas {
+  transform: rotate(359deg);
+  transition: transform 1s;
+}
+.plat .bur .forcenter .blocanim:hover .bloctext p:first-child {
+  width: 70%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .plat .bur .forcenter .blocanim:hover .bloc {
   border-radius: 15px 0px 0px 15px;
@@ -461,6 +513,9 @@ body footer a .foot .fa-hands-helping {
   width: 20%;
   overflow: visible;
   cursor: grab;
+}
+.plat .bur .forcenter .blocanim:hover .itemcheck .fas {
+  transform: rotate(0deg);
 }
 
 .commande {
@@ -481,11 +536,11 @@ body footer a .foot .fa-hands-helping {
   color: #fff;
   font-family: "Roboto";
   border-radius: 50px;
-  background: #9356DC;
-  transition: background-color 250ms;
+  background: linear-gradient(#FF79DA, #9356DC);
+  transition: background-color 1000ms;
 }
 .commande a:hover {
-  background-color: #ff93e1;
+  background: #FF79DA;
 }
 
 @media screen and (max-width: 1024px) {
@@ -571,7 +626,7 @@ body footer a .foot .fa-hands-helping {
     color: #fff;
     font-family: "Roboto";
     border-radius: 50px;
-    background-color: #9356DC;
+    background-color: linear-gradient(#FF79DA, #9356DC);
     transition: background-color 250ms;
   }
   .titre a:hover {
@@ -873,11 +928,11 @@ body footer a .foot .fa-hands-helping {
     color: #fff;
     font-family: "Roboto";
     border-radius: 50px;
-    background: #9356DC;
-    transition: background-color 250ms;
+    background: linear-gradient(#FF79DA, #9356DC);
+    transition: background-color 1000ms;
   }
   .commande a:hover {
-    background-color: #ff93e1;
+    background: #FF79DA;
   }
 }
 @media screen and (max-width: 768px) {
@@ -959,7 +1014,7 @@ body footer a .foot .fa-hands-helping {
     color: #fff;
     font-family: "Roboto";
     border-radius: 50px;
-    background-color: #9356DC;
+    background-color: linear-gradient(#FF79DA, #9356DC);
     transition: background-color 250ms;
   }
   .titre a:hover {
@@ -1254,11 +1309,11 @@ body footer a .foot .fa-hands-helping {
     color: #fff;
     font-family: "Roboto";
     border-radius: 50px;
-    background: #9356DC;
-    transition: background-color 250ms;
+    background: linear-gradient(#FF79DA, #9356DC);
+    transition: background-color 1000ms;
   }
   .commande a:hover {
-    background-color: #ff93e1;
+    background: #FF79DA;
   }
 }
 
