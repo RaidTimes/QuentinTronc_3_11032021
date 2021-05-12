@@ -42,6 +42,17 @@ Vert #99E2D0
     }
 }
 
+@keyframes fadein {
+    from {
+        margin-top: 100%;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0%;
+        opacity: 1;
+    }
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -256,6 +267,14 @@ body{
             color: black;
             margin-bottom: 20px;
             width: 100%;
+            .new{
+                z-index: 2;
+                padding: 5px;
+                background: #99E2D0;
+                color: darken(#99E2D0, 30);
+                position: relative;
+                bottom: 300%; left: 20%;
+            }
             .blocrestau{
                 display: flex;
                 flex-direction: column;
@@ -325,20 +344,20 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 300px;
+    height: 700px;
     background-color: #f2f2f2;
     font-family: 'shrikhand';
     font-size: 18px;
     .photohead{
         max-width: 100%;
-        height: 270px;
+        height: 700px;
         overflow: hidden;
         position: relative;
     }
     .photohead img{
         width: 100%;
         position: absolute;
-        bottom: 0%;
+        bottom: 1%;
     }
     .heartmenu{
         display: flex;
@@ -353,6 +372,7 @@ body{
         bottom: 10%;
         .heart{
             position: relative;
+            bottom: 25%; right: 5%;
             font-size: 25px;
             width: 12px;
             .inactif{
@@ -382,8 +402,19 @@ body{
     font-size: 14px;
     background-color:#f2f2f2;
     padding-top: 1px;
+    animation: fadein 3s;
     h2{
         padding-left: 15px;
+        margin-bottom: -10px;
+    }
+    h4{
+        content: "";
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #99E2D0;
+        width: 4%;
+        margin-left: 15px;
     }
     .bur{
         display: flex;
@@ -462,8 +493,19 @@ body{
     padding-top: 10px;
     font-size: 14px;
     background-color:#f2f2f2;
+    animation: fadein 3s;
     h2{
         padding-left: 15px;
+        margin-bottom: -10px;
+    }
+    h4{
+        content: "";
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #99E2D0;
+        width: 4%;
+        margin-left: 15px;
     }
     .bur{
         display: flex;
@@ -565,414 +607,12 @@ body{
 
 @media screen and (max-width: 1024px){
     body{
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
         font-family: 'Roboto';
         main{
-            max-width: 1440px;
-            margin: auto;
+            margin: 0;
         }
-        header{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 15px;
-            margin-top: 10px;
-            #head{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin-top: 10px;
-                background-color: #F2F2F2;
-                color: #2c2c2c;
-                #map{
-                    padding-left: 15px;
-                }
-            }
-        }
-        footer{
-            display: flex;
-            flex-direction: column;
-            padding-left: 245px;
-            color: white;
-            background-color: #2c2c2c;
-            font-size: 16px;
-            h2{
-                font-size: 20px;
-                font-style: italic;
-                font-family: 'shrikhand';
-            }
-            .foot{
-                display: flex;
-                align-items: center;
-                .fa-utensils{
-                    font-size: 15px;
-                    margin-right: 10px;
-                }
-                .fa-hands-helping{
-                    font-size: 12px;
-                    margin-right: 10px;
-                }
-            }
-        }
-    }
-    
-    //Title page principale
-    
-    .titre{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        font-size: 18px;
-        padding-left: 20px;
-        padding-right: 20px;
-        h1{
-            font-family: 'shrikhand';
-        }
-        .dec{
-            font-size: 16px;
-            color: #888888;
-        }
-        a{
-            margin-top: 10px;
-            text-decoration: none;
-            border: 0;
-            padding: 20px;
-            width: 20%;
-            font-size: 16px;
-            text-align: center;
-            color: #fff;
-            font-family: 'Roboto';
-            border-radius: 50px;
-            background-color: linear-gradient(#FF79DA, #9356DC);
-            transition: background-color 250ms;
-            &:hover{
-                background-color: lighten(#FF79DA, 5);
-            }
-        }
-    }
-    
-    //Fonctionnement
-    
-    .fonctionnement{
-        display: flex;
-        flex-direction: column;
-        h2{
-            font-size: 18px;
-            margin-left: 15px;
-        }
-        .bloccomplet{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            .blocfon{
-                display: flex;
-                align-items: center;
-                flex-direction: row;
-                margin-bottom: 30px;
-                width: 100%;
-                .number{
-                    padding: 5px;
-                    text-align: center;
-                    background-color: #9356DC;
-                    border-radius: 25px;
-                    font-size: 14px;
-                    width: 5%;
-                    position: relative;
-                    left: 4%;
-                }
-                .blocfonttext{
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    font-size: 14px;
-                    padding-top: 2%;
-                    padding-bottom: 2%;
-                    padding-left: 10%;
-                    padding-right: 20%;
-                    border-radius: 20px;
-                    background-color: #F2F2F2;
-                    width: 55%;
-                    #phone{
-                        padding-right: 20px;
-                    }
-                    #deg{
-                        padding-right: 20px;
-                        color: #9356DC;
-                    }
-                }
-                .blocfonttextcompo{
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    font-size: 14px;
-                    padding-top: 2%;
-                    padding-bottom: 2%;
-                    padding-left: 10%;
-                    padding-right: 23%;
-                    border-radius: 20px;
-                    background-color: #F2F2F2;
-                    width: 52%;
-                    #compo{
-                        padding-right: 20px;
-                    }
-                }
-            }
-        }
-    }
-    
-    //Restaurants
-    
-    .secrestau{
-        display: flex;
-        flex-direction: column;
-        background: #F2F2F2;
-        border-radius: 15px 15px 0px 0px;
-        padding-bottom: 40px;
-        h2{
-            font-size: 18px;
-            margin-left: 15px;
-        }
-        .bureau{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            a{
-                display: flex;
-                justify-content: center;
-                text-decoration: none;
-                color: black;
-                margin-bottom: 20px;
-                width: 100%;
-                .blocrestau{
-                    display: flex;
-                    flex-direction: column;
-                    background-color: white;
-                    border-radius: 15px 15px 15px 15px;
-                    width: 90%;
-                    height: 300px;
-                    .taillerestau{
-                        max-width: 100%;
-                        height: 200px;
-                        border-radius: 15px 15px 0px 0px;
-                        overflow: hidden;
-                        position: relative;
-                    }
-                    .taillerestau img{
-                        width: 100%;
-                        position: absolute;
-                        bottom: 0%;
-                    }
-                    .restauname{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-left: 10px;
-                        margin-right: 25px;
-                        font-size: 16px;
-                        font-family: 'Robotobold';
-                        .heart{
-                            position: relative;
-                            font-size: 25px;
-                            width: 12px;
-                            .inactif{
-                                position: absolute;
-                                left: 0;
-                                display: inline-block;
-                            }
-                            .actif{
-                                color: #9356DC;
-                                position: absolute;
-                                left: 0;
-                                display: none;
-                            }
-                            &:active{
-                                .inactif{
-                                    display: none;
-                                }
-                                .actif{
-                                    display: inline-block;
-                                }
-                            }
-                        }
-                    }
-                    .restauville{
-                        font-size: 14px;
-                        margin-left: 10px;
-                        position: relative;
-                        bottom: 5%;
-                    }
-                }
-            }
-        }
-    }
-    
-    // Page Menu
-    
-    .menuhead{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 300px;
-        background-color: #f2f2f2;
-        font-family: 'shrikhand';
-        font-size: 18px;
-        .photohead{
-            max-width: 100%;
-            height: 270px;
-            overflow: hidden;
-            position: relative;
-        }
-        .photohead img{
-            width: 100%;
-            position: absolute;
-            bottom: 0%;
-        }
-        .heartmenu{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #f2f2f2;
-            border-radius: 15px 15px 0px 0px;
-            padding-left: 15px;
-            padding-right: 20px;
-            max-width: 100%;
-            position: relative;
-            bottom: 10%;
-            .heart{
-                position: relative;
-                font-size: 25px;
-                width: 12px;
-                .inactif{
-                    position: absolute;
-                    left: 0;
-                    display: inline-block;
-                }
-                .actif{
-                    color: #9356DC;
-                    position: absolute;
-                    left: 0;
-                    display: none;
-                }
-                &:hover{
-                    .inactif{
-                        display: none;
-                    }
-                    .actif{
-                        display: inline-block;
-                    }
-                }
-            }
-        }
-    }
-    
-    .entree{
-        font-size: 14px;
-        background-color:#f2f2f2;
-        h2{
-            padding-left: 15px;
-        }
-        .bur{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            .forcenter{
-                display: flex;
-                justify-content: center;
-                padding-bottom: 15px;
-                width: 100%;
-                .bloc{
-                    display: flex;
-                    flex-direction: column;
-                    background-color: white;
-                    border-radius: 15px 15px 15px 15px;
-                    padding-left: 10px;
-                    width: 90%;
-                    height: 75px;
-                    .bloctext{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        padding-right: 15px;
-                        position: relative;
-                        bottom: 30%;
-                    }
-                }
-            }
-        }
-    }
-    
-    .plat{
-        padding-top: 10px;
-        font-size: 14px;
-        background-color:#f2f2f2;
-        h2{
-            padding-left: 15px;
-        }
-        .bur{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            .forcenter{
-                display: flex;
-                justify-content: center;
-                padding-bottom: 15px;
-                width: 100%;
-                .bloc{
-                    display: flex;
-                    flex-direction: column;
-                    background-color: white;
-                    border-radius: 15px 15px 15px 15px;
-                    padding-left: 10px;
-                    width: 90%;
-                    height: 75px;
-                    .bloctext{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        padding-right: 15px;
-                        position: relative;
-                        bottom: 30%;
-                    }
-                }
-            }
-        }
-    }
-    
-    .commande{
-        display: flex;
-        justify-content: center;
-        padding-top: 40px;
-        padding-bottom: 100px;
-        background-color: #f2f2f2;
-        a{
-            padding-top: 10px;
-            text-decoration: none;
-            border: 0;
-            padding: 20px;
-            width: 27%;
-            font-size: 18px;
-            text-align: center;
-            color: #fff;
-            font-family: 'Roboto';
-            border-radius: 50px;
-            background: linear-gradient(#FF79DA, #9356DC);
-            transition: background-color 1000ms;
-            &:hover{
-                background:#FF79DA;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 768px){
-    body{
-        margin: 0px;
-        padding: 0px;
-        font-family: 'Roboto';
         header{
             display: flex;
             flex-direction: column;
@@ -1144,6 +784,14 @@ body{
                 text-decoration: none;
                 color: black;
                 margin-bottom: 20px;
+                .new{
+                    z-index: 2;
+                    padding: 5px;
+                    background: #99E2D0;
+                    color: darken(#99E2D0, 30);
+                    position: relative;
+                    bottom: 300%; left: 30%;
+                }
                 .blocrestau{
                     display: flex;
                     flex-direction: column;
@@ -1213,13 +861,13 @@ body{
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 300px;
+        height: 350px;
         background-color: #f2f2f2;
         font-family: 'shrikhand';
         font-size: 18px;
         .photohead{
             max-width: 100%;
-            height: 270px;
+            height: 350px;
             overflow: hidden;
             position: relative;
         }
@@ -1238,9 +886,8 @@ body{
             padding-right: 20px;
             max-width: 100%;
             position: relative;
-            bottom: 10%;
+            bottom: 5%;
             .heart{
-                position: relative;
                 font-size: 25px;
                 width: 12px;
                 .inactif{
@@ -1271,6 +918,15 @@ body{
         background-color:#f2f2f2;
         h2{
             padding-left: 15px;
+        }
+        h4{
+            content: "";
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #99E2D0;
+            width: 15%;
+            margin-left: 15px;
         }
         .bur{
             display: flex;
@@ -1306,6 +962,436 @@ body{
         background-color:#f2f2f2;
         h2{
             padding-left: 15px;
+        }
+        h4{
+            content: "";
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #99E2D0;
+            width: 15%;
+            margin-left: 15px;
+        }
+        .bur{
+            display: flex;
+            flex-direction: column;
+            .forcenter{
+                display: flex;
+                justify-content: center;
+                padding-bottom: 15px;
+                .bloc{
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    border-radius: 15px 15px 15px 15px;
+                    padding-left: 10px;
+                    width: 90%;
+                    height: 75px;
+                    .bloctext{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-right: 15px;
+                        position: relative;
+                        bottom: 30%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .commande{
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 100px;
+        background-color: #f2f2f2;
+        a{
+            padding-top: 10px;
+            text-decoration: none;
+            border: 0;
+            padding: 20px;
+            width: 70%;
+            font-size: 18px;
+            text-align: center;
+            color: #fff;
+            font-family: 'Roboto';
+            border-radius: 50px;
+            background: linear-gradient(#FF79DA, #9356DC);
+            transition: background-color 1000ms;
+            &:hover{
+                background:#FF79DA;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 765px){
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto';
+        main{
+            margin: 0;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15px;
+            margin-top: 10px;
+            #head{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin-top: 10px;
+                background-color: #F2F2F2;
+                color: #2c2c2c;
+                #map{
+                    padding-left: 15px;
+                }
+            }
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            padding-left: 15px;
+            color: white;
+            background-color: #2c2c2c;
+            font-size: 16px;
+            h2{
+                font-size: 20px;
+                font-style: italic;
+                font-family: 'shrikhand';
+            }
+            .foot{
+                display: flex;
+                align-items: center;
+                .fa-utensils{
+                    font-size: 15px;
+                    margin-right: 10px;
+                }
+                .fa-hands-helping{
+                    font-size: 12px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    //Title page principale
+    
+    .titre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+        h1{
+            font-family: 'shrikhand';
+        }
+        .dec{
+            font-size: 16px;
+            color: #888888;
+        }
+        a{
+            margin-top: 10px;
+            text-decoration: none;
+            border: 0;
+            padding: 20px;
+            width: 70%;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+            font-family: 'Roboto';
+            border-radius: 50px;
+            background-color: linear-gradient(#FF79DA, #9356DC);
+            transition: background-color 250ms;
+            &:hover{
+                background-color: lighten(#FF79DA, 5);
+            }
+        }
+    }
+    
+    //Fonctionnement
+    
+    .fonctionnement{
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-size: 18px;
+            margin-left: 15px;
+        }
+        .bloccomplet{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .blocfon{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                margin-bottom: 30px;
+                width: 100%;
+                .number{
+                    padding: 5px;
+                    text-align: center;
+                    background-color: #9356DC;
+                    border-radius: 25px;
+                    font-size: 14px;
+                    width: 5%;
+                    position: relative;
+                    left: 4%;
+                }
+                .blocfonttext{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 12px;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    padding-left: 10%;
+                    padding-right: 20%;
+                    border-radius: 20px;
+                    background-color: #F2F2F2;
+                    width: 55%;
+                    #phone{
+                        padding-right: 20px;
+                    }
+                    #deg{
+                        padding-right: 20px;
+                        color: #9356DC;
+                    }
+                }
+                .blocfonttextcompo{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 12px;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    padding-left: 10%;
+                    padding-right: 23%;
+                    border-radius: 20px;
+                    background-color: #F2F2F2;
+                    width: 52%;
+                    #compo{
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
+    //Restaurants
+    
+    .secrestau{
+        display: flex;
+        flex-direction: column;
+        background: #F2F2F2;
+        padding-bottom: 40px;
+        h2{
+            font-size: 18px;
+            margin-left: 15px;
+        }
+        .bureau{
+            display: flex;
+            flex-direction: column;
+            a{
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                color: black;
+                margin-bottom: 20px;
+                .new{
+                    z-index: 2;
+                    padding: 5px;
+                    background: #99E2D0;
+                    color: darken(#99E2D0, 30);
+                    position: relative;
+                    bottom: 300%; left: 20%;
+                }
+                .blocrestau{
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    border-radius: 15px 15px 15px 15px;
+                    width: 90%;
+                    height: 300px;
+                    .taillerestau{
+                        max-width: 100%;
+                        height: 200px;
+                        border-radius: 15px 15px 0px 0px;
+                        overflow: hidden;
+                        position: relative;
+                    }
+                    .taillerestau img{
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0%;
+                    }
+                    .restauname{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-left: 10px;
+                        margin-right: 25px;
+                        font-size: 16px;
+                        font-family: 'Robotobold';
+                        .heart{
+                            position: relative;
+                            font-size: 25px;
+                            width: 12px;
+                            .inactif{
+                                position: absolute;
+                                left: 0;
+                                display: inline-block;
+                            }
+                            .actif{
+                                color: #9356DC;
+                                position: absolute;
+                                left: 0;
+                                display: none;
+                            }
+                            &:active{
+                                .inactif{
+                                    display: none;
+                                }
+                                .actif{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                    .restauville{
+                        font-size: 14px;
+                        margin-left: 10px;
+                        position: relative;
+                        bottom: 5%;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Page Menu
+    
+    .menuhead{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 350px;
+        background-color: #f2f2f2;
+        font-family: 'shrikhand';
+        font-size: 18px;
+        .photohead{
+            max-width: 100%;
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+        }
+        .photohead img{
+            width: 100%;
+            position: absolute;
+            bottom: 0%;
+        }
+        .heartmenu{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f2f2f2;
+            border-radius: 15px 15px 0px 0px;
+            padding-left: 15px;
+            padding-right: 20px;
+            max-width: 100%;
+            position: relative;
+            bottom: 5%;
+            .heart{
+                font-size: 25px;
+                width: 12px;
+                .inactif{
+                    position: absolute;
+                    left: 0;
+                    display: inline-block;
+                }
+                .actif{
+                    color: #9356DC;
+                    position: absolute;
+                    left: 0;
+                    display: none;
+                }
+                &:hover{
+                    .inactif{
+                        display: none;
+                    }
+                    .actif{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    
+    .entree{
+        font-size: 14px;
+        background-color:#f2f2f2;
+        h2{
+            padding-left: 15px;
+        }
+        h4{
+            content: "";
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #99E2D0;
+            width: 15%;
+            margin-left: 15px;
+        }
+        .bur{
+            display: flex;
+            flex-direction: column;
+            .forcenter{
+                display: flex;
+                justify-content: center;
+                padding-bottom: 15px;
+                .bloc{
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    border-radius: 15px 15px 15px 15px;
+                    padding-left: 10px;
+                    width: 90%;
+                    height: 75px;
+                    .bloctext{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-right: 15px;
+                        position: relative;
+                        bottom: 30%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .plat{
+        padding-top: 10px;
+        font-size: 14px;
+        background-color:#f2f2f2;
+        h2{
+            padding-left: 15px;
+        }
+        h4{
+            content: "";
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #99E2D0;
+            width: 15%;
+            margin-left: 15px;
         }
         .bur{
             display: flex;

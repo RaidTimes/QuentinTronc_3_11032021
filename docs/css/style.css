@@ -2,7 +2,6 @@
 Violet #9356DC
 Rose #FF79DA
 Vert #99E2D0
-npm run sass
 */
 @font-face {
   font-family: "shrikhand";
@@ -35,6 +34,16 @@ npm run sass
     opacity: 0;
     display: none;
     z-index: -10;
+  }
+}
+@keyframes fadein {
+  from {
+    margin-top: 100%;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0%;
+    opacity: 1;
   }
 }
 body {
@@ -249,6 +258,15 @@ body footer a .foot .fa-hands-helping {
   margin-bottom: 20px;
   width: 100%;
 }
+.secrestau .bureau a .new {
+  z-index: 2;
+  padding: 5px;
+  background: #99E2D0;
+  color: #32b091;
+  position: relative;
+  bottom: 300%;
+  left: 20%;
+}
 .secrestau .bureau a .blocrestau {
   display: flex;
   flex-direction: column;
@@ -311,21 +329,21 @@ body footer a .foot .fa-hands-helping {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 300px;
+  height: 700px;
   background-color: #f2f2f2;
   font-family: "shrikhand";
   font-size: 18px;
 }
 .menuhead .photohead {
   max-width: 100%;
-  height: 270px;
+  height: 700px;
   overflow: hidden;
   position: relative;
 }
 .menuhead .photohead img {
   width: 100%;
   position: absolute;
-  bottom: 0%;
+  bottom: 1%;
 }
 .menuhead .heartmenu {
   display: flex;
@@ -341,6 +359,8 @@ body footer a .foot .fa-hands-helping {
 }
 .menuhead .heartmenu .heart {
   position: relative;
+  bottom: 25%;
+  right: 5%;
   font-size: 25px;
   width: 12px;
 }
@@ -366,9 +386,20 @@ body footer a .foot .fa-hands-helping {
   font-size: 14px;
   background-color: #f2f2f2;
   padding-top: 1px;
+  animation: fadein 3s;
 }
 .entree h2 {
   padding-left: 15px;
+  margin-bottom: -10px;
+}
+.entree h4 {
+  content: "";
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #99E2D0;
+  width: 4%;
+  margin-left: 15px;
 }
 .entree .bur {
   display: flex;
@@ -444,9 +475,20 @@ body footer a .foot .fa-hands-helping {
   padding-top: 10px;
   font-size: 14px;
   background-color: #f2f2f2;
+  animation: fadein 3s;
 }
 .plat h2 {
   padding-left: 15px;
+  margin-bottom: -10px;
+}
+.plat h4 {
+  content: "";
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #99E2D0;
+  width: 4%;
+  margin-left: 15px;
 }
 .plat .bur {
   display: flex;
@@ -545,401 +587,12 @@ body footer a .foot .fa-hands-helping {
 
 @media screen and (max-width: 1024px) {
   body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: "Roboto";
   }
   body main {
-    max-width: 1440px;
-    margin: auto;
-  }
-  body header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 15px;
-    margin-top: 10px;
-  }
-  body header #head {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
-    background-color: #F2F2F2;
-    color: #2c2c2c;
-  }
-  body header #head #map {
-    padding-left: 15px;
-  }
-  body footer {
-    display: flex;
-    flex-direction: column;
-    padding-left: 245px;
-    color: white;
-    background-color: #2c2c2c;
-    font-size: 16px;
-  }
-  body footer h2 {
-    font-size: 20px;
-    font-style: italic;
-    font-family: "shrikhand";
-  }
-  body footer .foot {
-    display: flex;
-    align-items: center;
-  }
-  body footer .foot .fa-utensils {
-    font-size: 15px;
-    margin-right: 10px;
-  }
-  body footer .foot .fa-hands-helping {
-    font-size: 12px;
-    margin-right: 10px;
-  }
-
-  .titre {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 18px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .titre h1 {
-    font-family: "shrikhand";
-  }
-  .titre .dec {
-    font-size: 16px;
-    color: #888888;
-  }
-  .titre a {
-    margin-top: 10px;
-    text-decoration: none;
-    border: 0;
-    padding: 20px;
-    width: 20%;
-    font-size: 16px;
-    text-align: center;
-    color: #fff;
-    font-family: "Roboto";
-    border-radius: 50px;
-    background-color: linear-gradient(#FF79DA, #9356DC);
-    transition: background-color 250ms;
-  }
-  .titre a:hover {
-    background-color: #ff93e1;
-  }
-
-  .fonctionnement {
-    display: flex;
-    flex-direction: column;
-  }
-  .fonctionnement h2 {
-    font-size: 18px;
-    margin-left: 15px;
-  }
-  .fonctionnement .bloccomplet {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .fonctionnement .bloccomplet .blocfon {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-bottom: 30px;
-    width: 100%;
-  }
-  .fonctionnement .bloccomplet .blocfon .number {
-    padding: 5px;
-    text-align: center;
-    background-color: #9356DC;
-    border-radius: 25px;
-    font-size: 14px;
-    width: 5%;
-    position: relative;
-    left: 4%;
-  }
-  .fonctionnement .bloccomplet .blocfon .blocfonttext {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 14px;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 10%;
-    padding-right: 20%;
-    border-radius: 20px;
-    background-color: #F2F2F2;
-    width: 55%;
-  }
-  .fonctionnement .bloccomplet .blocfon .blocfonttext #phone {
-    padding-right: 20px;
-  }
-  .fonctionnement .bloccomplet .blocfon .blocfonttext #deg {
-    padding-right: 20px;
-    color: #9356DC;
-  }
-  .fonctionnement .bloccomplet .blocfon .blocfonttextcompo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 14px;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 10%;
-    padding-right: 23%;
-    border-radius: 20px;
-    background-color: #F2F2F2;
-    width: 52%;
-  }
-  .fonctionnement .bloccomplet .blocfon .blocfonttextcompo #compo {
-    padding-right: 20px;
-  }
-
-  .secrestau {
-    display: flex;
-    flex-direction: column;
-    background: #F2F2F2;
-    border-radius: 15px 15px 0px 0px;
-    padding-bottom: 40px;
-  }
-  .secrestau h2 {
-    font-size: 18px;
-    margin-left: 15px;
-  }
-  .secrestau .bureau {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .secrestau .bureau a {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    margin-bottom: 20px;
-    width: 100%;
-  }
-  .secrestau .bureau a .blocrestau {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 15px 15px 15px 15px;
-    width: 90%;
-    height: 300px;
-  }
-  .secrestau .bureau a .blocrestau .taillerestau {
-    max-width: 100%;
-    height: 200px;
-    border-radius: 15px 15px 0px 0px;
-    overflow: hidden;
-    position: relative;
-  }
-  .secrestau .bureau a .blocrestau .taillerestau img {
-    width: 100%;
-    position: absolute;
-    bottom: 0%;
-  }
-  .secrestau .bureau a .blocrestau .restauname {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 25px;
-    font-size: 16px;
-    font-family: "Robotobold";
-  }
-  .secrestau .bureau a .blocrestau .restauname .heart {
-    position: relative;
-    font-size: 25px;
-    width: 12px;
-  }
-  .secrestau .bureau a .blocrestau .restauname .heart .inactif {
-    position: absolute;
-    left: 0;
-    display: inline-block;
-  }
-  .secrestau .bureau a .blocrestau .restauname .heart .actif {
-    color: #9356DC;
-    position: absolute;
-    left: 0;
-    display: none;
-  }
-  .secrestau .bureau a .blocrestau .restauname .heart:active .inactif {
-    display: none;
-  }
-  .secrestau .bureau a .blocrestau .restauname .heart:active .actif {
-    display: inline-block;
-  }
-  .secrestau .bureau a .blocrestau .restauville {
-    font-size: 14px;
-    margin-left: 10px;
-    position: relative;
-    bottom: 5%;
-  }
-
-  .menuhead {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 300px;
-    background-color: #f2f2f2;
-    font-family: "shrikhand";
-    font-size: 18px;
-  }
-  .menuhead .photohead {
-    max-width: 100%;
-    height: 270px;
-    overflow: hidden;
-    position: relative;
-  }
-  .menuhead .photohead img {
-    width: 100%;
-    position: absolute;
-    bottom: 0%;
-  }
-  .menuhead .heartmenu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f2f2f2;
-    border-radius: 15px 15px 0px 0px;
-    padding-left: 15px;
-    padding-right: 20px;
-    max-width: 100%;
-    position: relative;
-    bottom: 10%;
-  }
-  .menuhead .heartmenu .heart {
-    position: relative;
-    font-size: 25px;
-    width: 12px;
-  }
-  .menuhead .heartmenu .heart .inactif {
-    position: absolute;
-    left: 0;
-    display: inline-block;
-  }
-  .menuhead .heartmenu .heart .actif {
-    color: #9356DC;
-    position: absolute;
-    left: 0;
-    display: none;
-  }
-  .menuhead .heartmenu .heart:hover .inactif {
-    display: none;
-  }
-  .menuhead .heartmenu .heart:hover .actif {
-    display: inline-block;
-  }
-
-  .entree {
-    font-size: 14px;
-    background-color: #f2f2f2;
-  }
-  .entree h2 {
-    padding-left: 15px;
-  }
-  .entree .bur {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .entree .bur .forcenter {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 15px;
-    width: 100%;
-  }
-  .entree .bur .forcenter .bloc {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 15px 15px 15px 15px;
-    padding-left: 10px;
-    width: 90%;
-    height: 75px;
-  }
-  .entree .bur .forcenter .bloc .bloctext {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 15px;
-    position: relative;
-    bottom: 30%;
-  }
-
-  .plat {
-    padding-top: 10px;
-    font-size: 14px;
-    background-color: #f2f2f2;
-  }
-  .plat h2 {
-    padding-left: 15px;
-  }
-  .plat .bur {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .plat .bur .forcenter {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 15px;
-    width: 100%;
-  }
-  .plat .bur .forcenter .bloc {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 15px 15px 15px 15px;
-    padding-left: 10px;
-    width: 90%;
-    height: 75px;
-  }
-  .plat .bur .forcenter .bloc .bloctext {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 15px;
-    position: relative;
-    bottom: 30%;
-  }
-
-  .commande {
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 100px;
-    background-color: #f2f2f2;
-  }
-  .commande a {
-    padding-top: 10px;
-    text-decoration: none;
-    border: 0;
-    padding: 20px;
-    width: 27%;
-    font-size: 18px;
-    text-align: center;
-    color: #fff;
-    font-family: "Roboto";
-    border-radius: 50px;
-    background: linear-gradient(#FF79DA, #9356DC);
-    transition: background-color 1000ms;
-  }
-  .commande a:hover {
-    background: #FF79DA;
-  }
-}
-@media screen and (max-width: 768px) {
-  body {
-    margin: 0px;
-    padding: 0px;
-    font-family: "Roboto";
+    margin: 0;
   }
   body header {
     display: flex;
@@ -1109,6 +762,15 @@ body footer a .foot .fa-hands-helping {
     color: black;
     margin-bottom: 20px;
   }
+  .secrestau .bureau a .new {
+    z-index: 2;
+    padding: 5px;
+    background: #99E2D0;
+    color: #32b091;
+    position: relative;
+    bottom: 300%;
+    left: 30%;
+  }
   .secrestau .bureau a .blocrestau {
     display: flex;
     flex-direction: column;
@@ -1171,14 +833,14 @@ body footer a .foot .fa-hands-helping {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-color: #f2f2f2;
     font-family: "shrikhand";
     font-size: 18px;
   }
   .menuhead .photohead {
     max-width: 100%;
-    height: 270px;
+    height: 350px;
     overflow: hidden;
     position: relative;
   }
@@ -1197,10 +859,9 @@ body footer a .foot .fa-hands-helping {
     padding-right: 20px;
     max-width: 100%;
     position: relative;
-    bottom: 10%;
+    bottom: 5%;
   }
   .menuhead .heartmenu .heart {
-    position: relative;
     font-size: 25px;
     width: 12px;
   }
@@ -1228,6 +889,15 @@ body footer a .foot .fa-hands-helping {
   }
   .entree h2 {
     padding-left: 15px;
+  }
+  .entree h4 {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #99E2D0;
+    width: 15%;
+    margin-left: 15px;
   }
   .entree .bur {
     display: flex;
@@ -1263,6 +933,425 @@ body footer a .foot .fa-hands-helping {
   }
   .plat h2 {
     padding-left: 15px;
+  }
+  .plat h4 {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #99E2D0;
+    width: 15%;
+    margin-left: 15px;
+  }
+  .plat .bur {
+    display: flex;
+    flex-direction: column;
+  }
+  .plat .bur .forcenter {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  .plat .bur .forcenter .bloc {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    padding-left: 10px;
+    width: 90%;
+    height: 75px;
+  }
+  .plat .bur .forcenter .bloc .bloctext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    position: relative;
+    bottom: 30%;
+  }
+
+  .commande {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background-color: #f2f2f2;
+  }
+  .commande a {
+    padding-top: 10px;
+    text-decoration: none;
+    border: 0;
+    padding: 20px;
+    width: 70%;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto";
+    border-radius: 50px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    transition: background-color 1000ms;
+  }
+  .commande a:hover {
+    background: #FF79DA;
+  }
+}
+@media screen and (max-width: 765px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+  }
+  body main {
+    margin: 0;
+  }
+  body header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-top: 10px;
+  }
+  body header #head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #F2F2F2;
+    color: #2c2c2c;
+  }
+  body header #head #map {
+    padding-left: 15px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    color: white;
+    background-color: #2c2c2c;
+    font-size: 16px;
+  }
+  body footer h2 {
+    font-size: 20px;
+    font-style: italic;
+    font-family: "shrikhand";
+  }
+  body footer .foot {
+    display: flex;
+    align-items: center;
+  }
+  body footer .foot .fa-utensils {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  body footer .foot .fa-hands-helping {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .titre h1 {
+    font-family: "shrikhand";
+  }
+  .titre .dec {
+    font-size: 16px;
+    color: #888888;
+  }
+  .titre a {
+    margin-top: 10px;
+    text-decoration: none;
+    border: 0;
+    padding: 20px;
+    width: 70%;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto";
+    border-radius: 50px;
+    background-color: linear-gradient(#FF79DA, #9356DC);
+    transition: background-color 250ms;
+  }
+  .titre a:hover {
+    background-color: #ff93e1;
+  }
+
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+  }
+  .fonctionnement h2 {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .fonctionnement .bloccomplet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fonctionnement .bloccomplet .blocfon {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .fonctionnement .bloccomplet .blocfon .number {
+    padding: 5px;
+    text-align: center;
+    background-color: #9356DC;
+    border-radius: 25px;
+    font-size: 14px;
+    width: 5%;
+    position: relative;
+    left: 4%;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 20%;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    width: 55%;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttext #phone {
+    padding-right: 20px;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttext #deg {
+    padding-right: 20px;
+    color: #9356DC;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttextcompo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 23%;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    width: 52%;
+  }
+  .fonctionnement .bloccomplet .blocfon .blocfonttextcompo #compo {
+    padding-right: 20px;
+  }
+
+  .secrestau {
+    display: flex;
+    flex-direction: column;
+    background: #F2F2F2;
+    padding-bottom: 40px;
+  }
+  .secrestau h2 {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .secrestau .bureau {
+    display: flex;
+    flex-direction: column;
+  }
+  .secrestau .bureau a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+  }
+  .secrestau .bureau a .new {
+    z-index: 2;
+    padding: 5px;
+    background: #99E2D0;
+    color: #32b091;
+    position: relative;
+    bottom: 300%;
+    left: 20%;
+  }
+  .secrestau .bureau a .blocrestau {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    width: 90%;
+    height: 300px;
+  }
+  .secrestau .bureau a .blocrestau .taillerestau {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 15px 15px 0px 0px;
+    overflow: hidden;
+    position: relative;
+  }
+  .secrestau .bureau a .blocrestau .taillerestau img {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+  }
+  .secrestau .bureau a .blocrestau .restauname {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 25px;
+    font-size: 16px;
+    font-family: "Robotobold";
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart {
+    position: relative;
+    font-size: 25px;
+    width: 12px;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart .inactif {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart .actif {
+    color: #9356DC;
+    position: absolute;
+    left: 0;
+    display: none;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart:active .inactif {
+    display: none;
+  }
+  .secrestau .bureau a .blocrestau .restauname .heart:active .actif {
+    display: inline-block;
+  }
+  .secrestau .bureau a .blocrestau .restauville {
+    font-size: 14px;
+    margin-left: 10px;
+    position: relative;
+    bottom: 5%;
+  }
+
+  .menuhead {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 350px;
+    background-color: #f2f2f2;
+    font-family: "shrikhand";
+    font-size: 18px;
+  }
+  .menuhead .photohead {
+    max-width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+  }
+  .menuhead .photohead img {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+  }
+  .menuhead .heartmenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    border-radius: 15px 15px 0px 0px;
+    padding-left: 15px;
+    padding-right: 20px;
+    max-width: 100%;
+    position: relative;
+    bottom: 5%;
+  }
+  .menuhead .heartmenu .heart {
+    font-size: 25px;
+    width: 12px;
+  }
+  .menuhead .heartmenu .heart .inactif {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+  }
+  .menuhead .heartmenu .heart .actif {
+    color: #9356DC;
+    position: absolute;
+    left: 0;
+    display: none;
+  }
+  .menuhead .heartmenu .heart:hover .inactif {
+    display: none;
+  }
+  .menuhead .heartmenu .heart:hover .actif {
+    display: inline-block;
+  }
+
+  .entree {
+    font-size: 14px;
+    background-color: #f2f2f2;
+  }
+  .entree h2 {
+    padding-left: 15px;
+  }
+  .entree h4 {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #99E2D0;
+    width: 15%;
+    margin-left: 15px;
+  }
+  .entree .bur {
+    display: flex;
+    flex-direction: column;
+  }
+  .entree .bur .forcenter {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  .entree .bur .forcenter .bloc {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    padding-left: 10px;
+    width: 90%;
+    height: 75px;
+  }
+  .entree .bur .forcenter .bloc .bloctext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    position: relative;
+    bottom: 30%;
+  }
+
+  .plat {
+    padding-top: 10px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+  }
+  .plat h2 {
+    padding-left: 15px;
+  }
+  .plat h4 {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #99E2D0;
+    width: 15%;
+    margin-left: 15px;
   }
   .plat .bur {
     display: flex;
