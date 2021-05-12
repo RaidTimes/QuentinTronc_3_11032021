@@ -1,11 +1,11 @@
 Fichier inutilisé présent dans le dossier allaite / Validé
 Les images suivent pas en mode tablette
 Il manque les tags nouveau / Validé
-Scroll horizontal sur les menus
+Scroll horizontal sur les menus / Validé
 Titre et coeur non aligné sur les menu / Validé
 Le coeur et trop collé sur la droite / Validé
 Entrées / plat / désert ne sont pas souligné / Validé
 Pas d’animation d’apparition lorsque l’on rentre sur un menu / Validé
-Lors du responsive sur les menu le contenu a soit une bande blanche soit sort du cadre / I don't know
+Lors du responsive sur les menu le contenu a soit une bande blanche soit sort du cadre / Validé
 L’image sur les menu doit étre plus haute / Validé
 Tu séparé le sass dans un dossier en essayant de faire une archi 7-1

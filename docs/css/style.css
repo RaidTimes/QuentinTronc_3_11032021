@@ -403,8 +403,6 @@ body footer a .foot .fa-hands-helping {
 }
 .entree .bur {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 .entree .bur .forcenter {
   padding-bottom: 15px;
@@ -1294,6 +1292,8 @@ body footer a .foot .fa-hands-helping {
   }
 
   .entree {
+    display: flex;
+    flex-direction: column;
     font-size: 14px;
     background-color: #f2f2f2;
   }
@@ -1311,14 +1311,17 @@ body footer a .foot .fa-hands-helping {
   }
   .entree .bur {
     display: flex;
-    flex-direction: column;
   }
   .entree .bur .forcenter {
     display: flex;
     justify-content: center;
-    padding-bottom: 15px;
+    margin: 0px;
   }
-  .entree .bur .forcenter .bloc {
+  .entree .bur .forcenter .blocanim {
+    display: flex;
+    justify-content: center;
+  }
+  .entree .bur .forcenter .blocanim .bloc {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -1327,7 +1330,7 @@ body footer a .foot .fa-hands-helping {
     width: 90%;
     height: 75px;
   }
-  .entree .bur .forcenter .bloc .bloctext {
+  .entree .bur .forcenter .blocanim .bloc .bloctext {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1358,11 +1361,13 @@ body footer a .foot .fa-hands-helping {
     flex-direction: column;
   }
   .plat .bur .forcenter {
+    margin-left: 0px;
+  }
+  .plat .bur .forcenter .blocanim {
     display: flex;
     justify-content: center;
-    padding-bottom: 15px;
   }
-  .plat .bur .forcenter .bloc {
+  .plat .bur .forcenter .blocanim .bloc {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -1371,7 +1376,7 @@ body footer a .foot .fa-hands-helping {
     width: 90%;
     height: 75px;
   }
-  .plat .bur .forcenter .bloc .bloctext {
+  .plat .bur .forcenter .blocanim .bloc .bloctext {
     display: flex;
     align-items: center;
     justify-content: space-between;
