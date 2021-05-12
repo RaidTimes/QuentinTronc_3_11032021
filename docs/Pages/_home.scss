@@ -1,0 +1,576 @@
+.titre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    h1{
+        font-family: 'shrikhand';
+    }
+    .dec{
+        font-size: 16px;
+        color: #888888;
+    }
+    a{
+        margin-top: 10px;
+        text-decoration: none;
+        border: 0;
+        padding: 20px;
+        width: 20%;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Roboto';
+        border-radius: 50px;
+        background: linear-gradient($pink, $purple);
+        transition: background-color 1000ms;
+        &:hover{
+            background: lighten($pink, 5);
+        }
+    }
+}
+
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    h2{
+        font-size: 18px;
+        margin-left: 15px;
+    }
+    .bloccomplet{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .blocfon{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin-bottom: 30px;
+            width: 100%;
+            .number{
+                padding: 5px;
+                text-align: center;
+                background-color: $purple;
+                border-radius: 25px;
+                font-size: 14px;
+                width: 5%;
+                position: relative;
+                left: 4%;
+            }
+            .blocfonttext{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 14px;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                padding-left: 10%;
+                padding-right: 20%;
+                border-radius: 20px;
+                background-color: $grey;
+                width: 55%;
+                #phone{
+                    padding-right: 20px;
+                }
+                #deg{
+                    padding-right: 20px;
+                    color: $purple;
+                }
+            }
+            .blocfonttextcompo{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 14px;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                padding-left: 10%;
+                padding-right: 23%;
+                border-radius: 20px;
+                background-color: $grey;
+                width: 52%;
+                #compo{
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+.secrestau{
+    display: flex;
+    flex-direction: column;
+    background: $grey;
+    border-radius: 15px 15px 0px 0px;
+    padding-bottom: 40px;
+    h2{
+        font-size: 18px;
+        margin-left: 15px;
+    }
+    .bureau{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        a{
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            margin-bottom: 20px;
+            width: 100%;
+            .new{
+                z-index: 2;
+                padding: 5px;
+                background: $green;
+                color: darken($green, 30);
+                position: relative;
+                bottom: 300%; left: 20%;
+            }
+            .blocrestau{
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 15px 15px 15px 15px;
+                width: 90%;
+                height: 300px;
+                .taillerestau{
+                    max-width: 100%;
+                    height: 200px;
+                    border-radius: 15px 15px 0px 0px;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .taillerestau img{
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0%;
+                }
+                .restauname{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-left: 10px;
+                    margin-right: 25px;
+                    font-size: 16px;
+                    font-family: 'Robotobold';
+                    .heart{
+                        position: relative;
+                        font-size: 25px;
+                        width: 12px;
+                        .inactif{
+                            position: absolute;
+                            left: 0;
+                            display: inline-block;
+                        }
+                        .actif{
+                            color: $purple;
+                            position: absolute;
+                            left: 0;
+                            display: none;
+                        }
+                        &:active{
+                            .inactif{
+                                display: none;
+                            }
+                            .actif{
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+                .restauville{
+                    font-size: 14px;
+                    margin-left: 10px;
+                    position: relative;
+                    bottom: 5%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .titre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+        h1{
+            font-family: 'shrikhand';
+        }
+        .dec{
+            font-size: 16px;
+            color: #888888;
+        }
+        a{
+            margin-top: 10px;
+            text-decoration: none;
+            border: 0;
+            padding: 20px;
+            width: 70%;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+            font-family: 'Roboto';
+            border-radius: 50px;
+            background-color: linear-gradient($pink, $purple);
+            transition: background-color 250ms;
+            &:hover{
+                background-color: lighten($pink, 5);
+            }
+        }
+    }
+
+    .fonctionnement{
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-size: 18px;
+            margin-left: 15px;
+        }
+        .bloccomplet{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .blocfon{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                margin-bottom: 30px;
+                width: 100%;
+                .number{
+                    padding: 5px;
+                    text-align: center;
+                    background-color: $purple;
+                    border-radius: 25px;
+                    font-size: 14px;
+                    width: 5%;
+                    position: relative;
+                    left: 4%;
+                }
+                .blocfonttext{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 12px;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    padding-left: 10%;
+                    padding-right: 20%;
+                    border-radius: 20px;
+                    background-color: $grey;
+                    width: 55%;
+                    #phone{
+                        padding-right: 20px;
+                    }
+                    #deg{
+                        padding-right: 20px;
+                        color: $purple;
+                    }
+                }
+                .blocfonttextcompo{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 12px;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    padding-left: 10%;
+                    padding-right: 23%;
+                    border-radius: 20px;
+                    background-color: $grey;
+                    width: 52%;
+                    #compo{
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .secrestau{
+        display: flex;
+        flex-direction: column;
+        background: $grey;
+        padding-bottom: 40px;
+        h2{
+            font-size: 18px;
+            margin-left: 15px;
+        }
+        .bureau{
+            display: flex;
+            flex-direction: column;
+            a{
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                color: black;
+                margin-bottom: 20px;
+                .new{
+                    z-index: 2;
+                    padding: 5px;
+                    background: $green;
+                    color: darken($green, 30);
+                    position: relative;
+                    bottom: 300%; left: 30%;
+                }
+                .blocrestau{
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    border-radius: 15px 15px 15px 15px;
+                    width: 90%;
+                    height: 300px;
+                    .taillerestau{
+                        max-width: 100%;
+                        height: 200px;
+                        border-radius: 15px 15px 0px 0px;
+                        overflow: hidden;
+                        position: relative;
+                    }
+                    .taillerestau img{
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0%;
+                    }
+                    .restauname{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-left: 10px;
+                        margin-right: 25px;
+                        font-size: 16px;
+                        font-family: 'Robotobold';
+                        .heart{
+                            position: relative;
+                            font-size: 25px;
+                            width: 12px;
+                            .inactif{
+                                position: absolute;
+                                left: 0;
+                                display: inline-block;
+                            }
+                            .actif{
+                                color: $purple;
+                                position: absolute;
+                                left: 0;
+                                display: none;
+                            }
+                            &:active{
+                                .inactif{
+                                    display: none;
+                                }
+                                .actif{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                    .restauville{
+                        font-size: 14px;
+                        margin-left: 10px;
+                        position: relative;
+                        bottom: 5%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 765px){
+    .titre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+        h1{
+            font-family: 'shrikhand';
+        }
+        .dec{
+            font-size: 16px;
+            color: #888888;
+        }
+        a{
+            margin-top: 10px;
+            text-decoration: none;
+            border: 0;
+            padding: 20px;
+            width: 70%;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+            font-family: 'Roboto';
+            border-radius: 50px;
+            background-color: linear-gradient($pink, $purple);
+            transition: background-color 250ms;
+            &:hover{
+                background-color: lighten($pink, 5);
+            }
+        }
+    }
+    
+    .fonctionnement{
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-size: 18px;
+            margin-left: 15px;
+        }
+        .bloccomplet{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .blocfon{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                margin-bottom: 30px;
+                width: 100%;
+                .number{
+                    padding: 5px;
+                    text-align: center;
+                    background-color: $purple;
+                    border-radius: 25px;
+                    font-size: 14px;
+                    width: 5%;
+                    position: relative;
+                    left: 4%;
+                }
+                .blocfonttext{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 12px;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    padding-left: 10%;
+                    padding-right: 20%;
+                    border-radius: 20px;
+                    background-color: $grey;
+                    width: 55%;
+                    #phone{
+                        padding-right: 20px;
+                    }
+                    #deg{
+                        padding-right: 20px;
+                        color: $purple;
+                    }
+                }
+                .blocfonttextcompo{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 12px;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    padding-left: 10%;
+                    padding-right: 23%;
+                    border-radius: 20px;
+                    background-color: $grey;
+                    width: 52%;
+                    #compo{
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .secrestau{
+        display: flex;
+        flex-direction: column;
+        background: $grey;
+        padding-bottom: 40px;
+        h2{
+            font-size: 18px;
+            margin-left: 15px;
+        }
+        .bureau{
+            display: flex;
+            flex-direction: column;
+            a{
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                color: black;
+                margin-bottom: 20px;
+                .new{
+                    z-index: 2;
+                    padding: 5px;
+                    background: $green;
+                    color: darken($green, 30);
+                    position: relative;
+                    bottom: 300%; left: 20%;
+                }
+                .blocrestau{
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    border-radius: 15px 15px 15px 15px;
+                    width: 90%;
+                    height: 300px;
+                    .taillerestau{
+                        max-width: 100%;
+                        height: 200px;
+                        border-radius: 15px 15px 0px 0px;
+                        overflow: hidden;
+                        position: relative;
+                    }
+                    .taillerestau img{
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0%;
+                    }
+                    .restauname{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-left: 10px;
+                        margin-right: 25px;
+                        font-size: 16px;
+                        font-family: 'Robotobold';
+                        .heart{
+                            position: relative;
+                            font-size: 25px;
+                            width: 12px;
+                            .inactif{
+                                position: absolute;
+                                left: 0;
+                                display: inline-block;
+                            }
+                            .actif{
+                                color: $purple;
+                                position: absolute;
+                                left: 0;
+                                display: none;
+                            }
+                            &:active{
+                                .inactif{
+                                    display: none;
+                                }
+                                .actif{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                    .restauville{
+                        font-size: 14px;
+                        margin-left: 10px;
+                        position: relative;
+                        bottom: 5%;
+                    }
+                }
+            }
+        }
+    }
+}
