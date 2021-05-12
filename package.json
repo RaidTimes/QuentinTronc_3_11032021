@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "sass": "sass --watch docs/main.scss:docs/css/style.css"
+    "sass": "sass --watch docs/sass/base.scss:docs/css/style.css"
   },
   "repository": {
     "type": "git",
