@@ -1,14 +1,14 @@
 @font-face {
   font-family: "shrikhand";
-  src: url("../base/police/Shrikhand-Regular.ttf");
+  src: url("../assets/police/Shrikhand-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../base/police/Roboto-Regular.ttf");
+  src: url("../assets/police/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: "Robotobold";
-  src: url("../base/police/Roboto-Bold.ttf");
+  src: url("../assets/police/Roboto-Bold.ttf");
 }
 @keyframes items {
   0% {
@@ -183,7 +183,7 @@ body footer a .foot .fa-hands-helping {
     margin-right: 10px;
   }
 }
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 465px) {
   body {
     margin: 0;
     padding: 0;
@@ -620,7 +620,7 @@ body footer a .foot .fa-hands-helping {
     bottom: 5%;
   }
 }
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 465px) {
   .titre {
     display: flex;
     flex-direction: column;
@@ -1239,7 +1239,7 @@ body footer a .foot .fa-hands-helping {
     background: #FF79DA;
   }
 }
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 465px) {
   .menuhead {
     display: flex;
     flex-direction: column;
